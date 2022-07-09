@@ -1,7 +1,8 @@
-export const showList = (todos: any[]) =>
-  `Ваш список задач: \n\n${todos
+export const showList = (tasks: any[]) =>
+  `Ваш список задач: \n\n${tasks
     .map(
-      (todo, index) =>
-        (todo.isCompleted ? '✅' : '🌀') + ` ${index + 1}. ${todo.title} \n\n`,
+      (tasks, index) =>
+        (tasks.isCompleted ? '✅' : '🌀') +
+        ` ${index + 1}. ${tasks.title} \n\n`,
     )
     .join('')}`;
